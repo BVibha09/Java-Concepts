@@ -1,0 +1,25 @@
+//String Concatenation:
+
+package MarchSessions;
+public class ConcatenationPractice{
+
+	public static void main(String[] args) {
+		
+		/*Addition = 2 or multiple digits
+		 * Concatenation = Multiple String, integers, characters, etc.
+		 */
+		
+		int a=10;
+		int b=20;
+		
+		String x = "Selenium";
+		String y = "Class";
+		
+		System.out.println(a+b);
+		System.out.println(x+y);
+		System.out.println(a+b+x+y);
+		System.out.println(x+y+a+b);
+		System.out.println(x+y+(a+b));
+		System.out.println(a+b+x+a+b+y+(a+b));	
+	}
+}
