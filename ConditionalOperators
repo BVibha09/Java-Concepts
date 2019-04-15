@@ -1,0 +1,39 @@
+//Conditional operators:
+
+package MarchSessions;
+public class ConditionalOperators {
+
+	public static void main(String[] args) {
+		
+		//Conditional operators are < > <= >= == !=
+		
+		int a = 10;
+		if(a == 10)
+		{
+			System.out.println("Value of a is correct");
+		}
+		else{
+			System.out.println("Value of a is incorrect");
+		}
+		
+		int b = 20;
+		if(b!=20){
+			System.out.println("Value of b is incorrect");
+		}
+		else{
+			System.out.println("Value of b is correct");
+		}
+		
+		//To compare string, instead of using conditional operators, equals or other methods are used
+		
+		String p = "Admin";
+		String q = "Welcome "+p;
+		
+		if(q.equals("Welcome Admin")){
+			System.out.println("Correct message");
+		}
+		else{
+			System.out.println("Wrong message");
+		}
+	}
+}
