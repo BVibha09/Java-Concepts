@@ -1,0 +1,24 @@
+//Class and Objects:
+
+package JavaStudy;
+public class SimpleClassAndObjects {
+
+	public static String Name = "Vibha";
+	public static String Destination = "London";
+	public static double Cost = 50000;
+	
+	public static void main(String[] args) {
+		SimpleClassAndObjects a = new SimpleClassAndObjects();
+		
+		if(Name.equals ("Vaidehi"))
+		{
+		System.out.println(a.Name);
+		System.out.println(a.Destination);
+		System.out.println(a.Cost);
+		}
+		else
+		{
+			System.out.println("No information stored");
+		}
+	}
+}
