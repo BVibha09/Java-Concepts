@@ -1,0 +1,27 @@
+//Array- One and Two dimensional:
+
+package JavaStudy;
+public class OneAndTwoDimArray {
+	
+	public static void main(String[] args) {
+
+		//One dimensional array
+		
+		int ar[]; 
+			ar = new int[3];
+			ar[0] = 10;
+			ar[1] = 20;
+			ar[2] = 30;
+			System.out.println(ar[0]);
+			
+		int[] a = {100,200,300};
+		System.out.println(a[1]);
+		
+		//Two dimensional array
+		
+		char m[] = {'a','b','c'};
+		char n[] = {'x','y','z'};
+		
+		System.out.println(m[0] + " " + n[2]);	
+	}	
+}
