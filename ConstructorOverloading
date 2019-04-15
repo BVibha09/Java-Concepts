@@ -1,0 +1,30 @@
+//Constructor Overloading:
+
+package JavaStudy;
+public class ConstructorOverload {
+	
+	int empId;
+	String empName;
+	float empSalary;
+	String empLocation;
+	
+	public ConstructorOverload(int empId, String empName, float empSalary, String empLocation){
+		this.empId = empId;
+		this.empName = empName;
+		this.empSalary = empSalary;
+		this.empLocation = empLocation;
+	}
+
+	public ConstructorOverload(String empName, float empSalary){
+		this.empName = empName;
+		this.empSalary = empSalary;
+	}
+	
+	public static void main(String[] args) {
+	//ConstructorOverload c = new ConstructorOverload(101, "Vibha", 10000, "Pune");
+	//System.out.println(c.empId+ " " +c.empName+ " " +c.empSalary+ " " +c.empLocation);
+	
+	ConstructorOverload c = new ConstructorOverload("Vibha", 20000);
+	System.out.println(c.empName+ " " +c.empSalary);
+	}
+}
