@@ -1,0 +1,59 @@
+//Java Functions: 
+
+package JavaStudy;
+import java.util.ArrayList;
+public class JavaFunctions {
+
+	//No input and no return
+	
+	public void test(){
+		System.out.println("Test Method");
+	}
+	
+	//No input and some return
+	public int sum(int a, int b){
+		int c = a+b;
+		System.out.println(c);
+		return c;
+	}
+	
+	//Get students list using static array
+	public String[] getStudList(){
+		String student[] = {"Robert", "John", "Koen"};
+		return student;
+	}
+	
+	//Get hotels list using Arraylist
+	public ArrayList<String> hotels(){
+		ArrayList<String> ar = new ArrayList<String>(3);
+		ar.add("Hyatt");
+		ar.add("Novotel");
+		ar.add("JW Marriott");
+		return ar;
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		JavaFunctions s1 = new JavaFunctions();
+		s1.test();
+		
+		JavaFunctions s2 = new JavaFunctions();
+		s2.sum(10,20);
+		
+		JavaFunctions s3 = new JavaFunctions();
+		String student[] = s3.getStudList();
+		
+		for(int i=0; i<student.length; i++)
+		{
+		System.out.print(student[i] + " ");
+		
+		}
+		
+		System.out.println();
+		
+		JavaFunctions s4 = new JavaFunctions();
+		System.out.println(s4.hotels());		
+		}	
+	}
+
