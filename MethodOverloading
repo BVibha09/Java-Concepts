@@ -1,0 +1,40 @@
+//Method Overloading:
+
+package JavaStudy;
+public class MethodOverload {
+
+	static String userName;
+	static String password;
+	static long phoneNumber;
+	
+	public String Login(String userName){
+		System.out.println("Login details: " +userName);
+		return userName;
+	}
+	
+	public long Login(long phoneNumber){
+		System.out.println("Login details: " +phoneNumber);
+		return phoneNumber;
+	}
+	
+	public String LoginApp(long phoneNumber, String password){
+		System.out.println("Login details: " +phoneNumber+ " " +password);
+		return password;
+	}
+	
+	public String LoginApp(String userName, long phoneNumber, String password){
+		System.out.println("Login details: " +userName+ " " +phoneNumber+ " " +password);
+		return userName;
+	}
+	
+	public static void main(String[] args) {
+
+		MethodOverload m1 = new MethodOverload();
+		//m1.Login("Vibha");
+		m1.Login(9988);
+		
+		MethodOverload m2 = new MethodOverload();
+		//m2.LoginApp(9988 , "password");
+		m2.LoginApp("Vibha" , 9988 , "password");
+	}
+}
