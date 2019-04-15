@@ -1,0 +1,55 @@
+package MarchSessions;
+public class DataTypesBatch {
+
+	public static void main(String[] args) {
+	
+		/* This is a Data types learning program
+		 * 
+		 * Primitive data types are as below
+		  byte = 1 byte | short = 2 bytes | int = 4 bytes | long = 8 bytes
+		  float = 4 bytes | double = 8 bytes | char = 2 bytes | boolean = approximately 1 bit
+		  
+		 *Java class
+		 String: starts with capital letter and it's not a data type but a class.
+		 it's size varies depending upon the characters inside double quotes.
+		  */
+		
+		byte i1=1;
+		byte i2=10;
+		System.out.println(i1+i2);
+		
+		short s=10;
+		System.out.println(s);
+		
+		int i=10;
+		i=20;
+		// Valid declaration: J=-10;
+		System.out.println(i);
+		
+		long l=1212121;
+		System.out.println(l);
+		
+		System.out.println(i1+s+i+l);
+		
+		float f1 = 12.33F;
+		float f2 = (float)31.33F;
+		System.out.println(f1+f2);
+		
+		double d = 10.12121;
+		double d1 = 50.21;
+		System.out.println(d+d1);
+		
+		char a = 'c';
+		char b = '3';
+		System.out.println(a+b);
+		
+		boolean x = true;
+		boolean x1 = false;
+		System.out.println(x);
+		System.out.println(x1);
+		
+		String z1 = "Hello";
+		String z2 = "World";
+		System.out.println(z1+z2);		
+	}
+}
