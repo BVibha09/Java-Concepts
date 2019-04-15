@@ -1,0 +1,55 @@
+//Decrement Operators:
+
+package MarchSessions;
+public class DecrementOperators {
+	
+	public static void main(String args[])
+	
+	{
+	/* Decrement (Pre/Post): --i/i--
+	 */
+
+		    //Pre decrement
+			int i = 10;
+			int j = --i;
+			
+			System.out.println(i); //9
+			System.out.println(j); //9
+			
+			//Post increment
+			int m = 100;
+			int n = m--; //
+			
+			System.out.println(--m); //98
+			System.out.println(m);  //98
+			System.out.println(m); //98
+			System.out.println(n); //100
+			
+			System.out.println();
+			
+			int a = 10;
+			int b = --a;
+			int c = a--;
+			
+			System.out.println(a); //8
+			System.out.println(--b); //8
+			System.out.println(--a); //7
+			System.out.println(a--); //7
+			System.out.println(a); //6
+			System.out.println(b--); //8
+			System.out.println(b); //7
+			System.out.println(c); //9
+			System.out.println(c--); //9
+			System.out.println(--c); //7
+			
+			System.out.println();
+			
+			int e = 0;
+			int f = e--;
+			int g = --e;
+			
+			System.out.println(e);
+			System.out.println(f);
+			System.out.println(g);
+	}
+}
