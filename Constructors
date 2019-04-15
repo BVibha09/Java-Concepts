@@ -1,0 +1,22 @@
+//Constructors:
+
+package JavaStudy;
+public class Constructors {
+	
+	int empId;
+	String empName;
+	float empSalary;
+	String empLocation;
+	
+	public Constructors(int empId, String empName, float empSalary, String empLocation){
+		this.empId = empId;
+		this.empName = empName;
+		this.empSalary = empSalary;
+		this.empLocation = empLocation;
+	}
+
+	public static void main(String[] args) {
+	Constructors c = new Constructors(101, "Vibha", 10000, "Pune");
+	System.out.println(c.empId+ " " +c.empName+ " " +c.empSalary+ " " +c.empLocation);
+	}
+}
