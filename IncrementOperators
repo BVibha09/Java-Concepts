@@ -1,0 +1,45 @@
+//Increment Operators:
+
+package MarchSessions;
+public class IncrementOperators {
+	
+	public static void main(String args[])
+	
+	{
+	/* Increment (Pre/Post): ++i/i++
+	 */
+
+		    //Pre increment
+			int i = 1;
+			int j = ++i;
+			
+			System.out.println(i);
+			System.out.println(j);
+			
+			//Post increment
+			int m = 10;
+			int n = m++;
+			
+			System.out.println(++m);
+			System.out.println(m);
+			System.out.println(m);
+			System.out.println(n);
+			
+			System.out.println();
+			
+			int a = 10;
+			int b = ++a;
+			int c = a++;
+			
+			System.out.println(a);
+			System.out.println(++b);
+			System.out.println(++a);
+			System.out.println(a++);
+			System.out.println(a);
+			System.out.println(b++);
+			System.out.println(b);
+			System.out.println(c);
+			System.out.println(c++);
+			System.out.println(++c);
+	}
+}
