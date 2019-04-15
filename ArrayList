@@ -1,0 +1,34 @@
+//Arraylist:
+
+package MarchSessions;
+import java.util.*;
+
+public class ArList {
+
+	public static void main(String[] args) {
+		
+		 ArrayList<String> a = new ArrayList<String>();
+		 a.add("Sejal");
+		 a.add("Samayra");
+		 a.add("Anvita");
+		 
+		 System.out.println(a);
+		
+		 int i=1;
+		 do{
+		 a.add(Integer.toString(i));
+		 i++;
+		 }while (i<=20);
+		
+		 System.out.println(a);
+		 
+		ArrayList<Integer> m = new ArrayList<Integer>();
+		 int j=1;
+		 do{
+		 m.add(j);
+		 j++;
+		 }while (j<=20);
+		 System.out.println(m);
+	}
+}
+
