@@ -1,0 +1,164 @@
+//Interface
+Interface 1:
+
+package OOP2;
+public interface Audi {
+	
+	int audiPrice = 1200;
+
+	public void start();
+	
+	public void stop();
+	
+	public void reFuel();
+	
+	public static void audiBreak(){
+		System.out.println("Audi--> Break");
+	}
+}
+
+=============================================================================================================================================================================================
+
+Interface 2:
+
+package OOP2;
+public interface BMW {
+	
+	String BMWclr = "Blue";
+
+	public void start();
+	
+	public void engine();
+}
+
+=============================================================================================================================================================================================
+
+Interface 3:
+
+package OOP2;
+public interface Honda {
+	
+	public void stop();
+	
+	public void reStart();
+	
+	public default void demo(){
+		System.out.println("Honda--> Demo");
+	}
+}
+
+=============================================================================================================================================================================================
+
+Class implementing all 3 interfaces:
+
+package OOP2;
+public class Car implements Audi, BMW, Honda{
+
+	@Override
+	public void start() {
+		System.out.println("Audi--> Start");
+		System.out.println("BMW--> Start");
+	}
+	
+	@Override
+	public void stop() {
+		System.out.println("Audi--> Stop");
+		System.out.println("Honda--> Stop");
+	}
+	
+	@Override
+	public void reFuel() {
+		System.out.println("Audi--> reFuel");
+	}
+
+	@Override
+	public void engine() {
+		System.out.println("BMW--> engine");
+	}
+
+	@Override
+	public void reStart() {
+		System.out.println("Honda--> reStart");
+	}
+	
+	public void keys(){
+		System.out.println("Car--> Keys");
+	}
+	
+	public void insurance(){
+		System.out.println("Car--> Insurance");
+	}
+
+	//If static method is only present in one interface and class is implementing other interfaces
+	// than that, then @Override is not allowed.
+	public void audiBreak() {
+		Audi.audiBreak();
+	}
+	
+	@Override
+	public void demo() {
+		demo();
+	}
+}
+
+=============================================================================================================================================================================================
+
+Main class:
+
+package OOP2;
+public class TestCar {
+
+	public static void main(String[] args) {
+		Car c = new Car(); //Object of Car class
+		Honda h = new Car(); //Object of Car class referring to Honda interface
+		
+		h.stop();
+		
+		System.out.println("Start methods of Audi and BMW: ");
+		c.start();
+		
+		System.out.println();
+		
+		System.out.println("Stop method of Audi and Honda: ");
+		c.stop();
+		
+		System.out.println();
+		
+		System.out.println("ReFuel method of Audi: ");
+		c.reFuel();
+		
+		System.out.println();
+		
+		System.out.println("Engine method of BMW: ");
+		c.engine();
+		
+		System.out.println();
+		
+		System.out.println("ReStart method of Honda: ");
+		c.reStart();
+		
+		System.out.println();
+		
+		System.out.println("audiBreak method of Audi: ");
+		c.audiBreak();
+		
+		System.out.println();
+		
+		Audi.audiBreak();
+		
+		System.out.println();
+		
+		System.out.println("Keys and Insurance methods of Car: ");
+		c.keys();
+		c.insurance();
+		
+		System.out.println();
+		
+		System.out.println("Price of Audi is: " + Audi.audiPrice);
+		System.out.println("Color of BMW is: " + BMW.BMWclr);
+
+	}
+}
+=============================================================================================================================================================================================
+
+
