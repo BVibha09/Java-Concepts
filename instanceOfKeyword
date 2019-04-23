@@ -1,0 +1,92 @@
+instanceOf keyword: To check if given reference is an instance of that class or not
+
+Parent class:
+
+package OOP1;
+public class School {
+	
+	public void Name(){
+		System.out.println("School --> Name");
+	}
+	
+	public void Rank(){
+		System.out.println("School --> Rank");
+	}
+}
+
+==========================================================================================
+
+Child class:
+
+package OOP1;
+public class Students extends School{
+	
+	public void Marks(){
+		System.out.println("Student --> Marks");
+	}
+	
+	@Override
+	public void Name(){
+		System.out.println("Student --> Name");
+	}	
+}
+
+===========================================================================================
+
+Main class:
+
+package OOP1;
+public class StudTest {
+
+	public static void main(String[] args) {
+		
+		School sc = new School();
+		sc.Name();
+		sc.Rank();
+		
+		System.out.println("======================="); 
+
+		School std = new Students();
+		std.Name();
+		std.Rank();
+
+		System.out.println("======================="); 
+
+		Students stud = new Students();
+		stud.Marks();
+		stud.Class();
+		stud.Name();
+		
+		System.out.println("=======================");
+		
+		//instanceof: To check if given reference is an instance of that class or not
+		if (sc instanceof School){
+			System.out.println("Pass");
+		}
+		else{
+			System.out.println("Fail");
+		}
+		
+		if (sc instanceof Students){
+			System.out.println("Pass");
+		}
+		else{
+			System.out.println("Fail");
+		}
+
+		if (stud instanceof School){
+			System.out.println("Pass");
+		}
+		else{
+			System.out.println("Fail");
+		}
+		
+		if (stud instanceof Students){
+			System.out.println("Pass");
+		}
+		else{
+			System.out.println("Fail");
+		}
+	}
+}
+
