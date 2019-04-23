@@ -1,0 +1,39 @@
+Static Keyword:
+
+package MarchSessions;
+public class StaticKeyword {
+	
+	static String empName = "Riya";
+	float Salary = 50000F;
+	
+	public static void Timesheet(){
+		System.out.println("Timesheet method");
+	}
+	
+	public void Appraisal(){
+		System.out.println("Appraisal method");
+	}
+
+	public static void main(String[] args) {
+		
+		//How to call non-static data members(Variables and methods)
+		//1. By creating Object of class
+				
+		StaticKeyword Obj = new StaticKeyword();
+		System.out.println(Obj.Salary);
+		Obj.Appraisal();
+				
+		//How to call static data members(variables and methods):
+		//1. Call directly
+		System.out.println(empName);
+		Timesheet();
+		
+		//2. Call by using class name
+		System.out.println(StaticKeyword.empName);
+		StaticKeyword.Timesheet();
+		
+		//3. Call by object of class
+		System.out.println(Obj.empName);
+		Obj.Timesheet();
+	}
+}
