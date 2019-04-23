@@ -1,0 +1,59 @@
+Method Overriding:
+
+Parent Class:
+
+package OOP1;
+public class School {
+	
+	public void Name(){
+		System.out.println("School --> Name");
+	}
+	
+	public void Rank(){
+		System.out.println("School --> Rank");
+	}
+}
+
+======================================================================================================
+
+Child Class:
+
+package OOP1;
+public class Students extends School {
+	
+	public void Marks(){
+		System.out.println("Student --> Marks");
+	}
+	
+	public void Class(){
+		System.out.println("Student --> Class");
+	}
+	
+	@Override
+	public void Name(){
+		System.out.println("Student --> Name");
+	}	
+}
+
+========================================================================================================
+
+Main Class:
+
+package OOP1;
+public class StudTest {
+
+	public static void main(String[] args) {
+		
+		School sc = new School();
+		sc.Name();
+		sc.Rank();
+		
+		School std = new Students();
+		std.Name();
+		
+		Students stud = new Students();
+		stud.Marks();
+		stud.Class();
+		stud.Name();
+	}
+}
