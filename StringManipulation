@@ -1,0 +1,138 @@
+package MarchSessions;
+import java.util.ArrayList;
+
+public class StringManipulations {
+
+	public static void main(String[] args) {
+	
+		String s = "This is my java practice program";
+		
+		//M1: Length of a string
+		
+		System.out.println(s.length());
+		
+		//M2: To verify which char lies at given position/index
+		
+		//When char in a string at given index is blank space, then console print blank space
+		System.out.println(s.charAt(10));
+		
+		//When char in a string at given index is valid, then that char is displayed
+		System.out.println(s.charAt(11));
+		
+		//when there is no char at given index like index value is greater than length of string, 
+		//StringIndexOutOfBoundException occurs
+		//System.out.println(s.charAt(70));
+		
+		//M3: To verify what is the position/index of given char in a string
+		System.out.println(s.indexOf("j"));
+		
+		//M4: To identify any char displays at the second occurance
+		
+		//Using directly char and index value after first occurance of that char
+		System.out.println(s.indexOf("s", 5));
+		
+		//Using directly char and index of method with same char by incrementing index
+		System.out.println(s.indexOf("s", s.indexOf("s")+1));
+		
+		//M5: Finding an index using complete string, which returns index of first char in string
+		System.out.println(s.indexOf("java"));
+		
+		//If a string is not available in given string(here s), it returns -1, as defined by java
+		//Because if any sub string is not available, java considers its presence before the actual string
+		System.out.println(s.indexOf("hello"));
+		
+		String msg = "Welcome admin";
+		if(msg.indexOf("admin")>=0){
+			System.out.println("Correct message");
+		}else
+		{
+			System.out.println("Incorrect message");
+		}
+		
+		String msg1 = "Welcome null";
+		if(msg1.indexOf("admin")>=0){
+			System.out.println("Correct message");
+		}else
+		{
+			System.out.println("Incorrect message");
+		}
+		
+		//trim: to remove before and after spaces of a string
+		
+		String a = "    Hello Selenium    ";
+		System.out.println(a.trim());
+		String j = a.trim();
+		
+		//replace
+		System.out.println(j.replaceAll("Selenium", "testing"));
+		System.out.println(j.replace(" ", ""));
+		
+		//Upper or lower case
+		System.out.println(j.toUpperCase());
+		System.out.println(j.toLowerCase());
+		
+		//Sub string
+		String mesg = "Transaction id is 12345";
+		System.out.println(mesg.substring(18,23));
+			//Or - Assignment during class
+		System.out.println(mesg.substring(mesg.indexOf("is")+2));
+		
+		//Comparison
+		String s1 = "Chrome";
+		String s2 = "Firefox";
+		
+		if(s1.equals(s2)){
+			System.out.println("Same browsers");
+		}else
+		{
+			System.out.println("Different browsers");
+		}
+					//Or to print boolean value output
+		System.out.println(s1.equals(s2));
+		
+		char c = 88;
+		System.out.println(c);
+		
+		System.out.println("===================================");
+		//Split
+		String z = "This_is_string_manipulation_program";
+		String z1[] = z.split("_");
+		ArrayList<String> ar = new ArrayList<String>();
+		
+		for(int i=0; i<z1.length;i++){
+			System.out.println(z1[i] + " ");
+			ar.add(z1[i]);
+		}
+		
+		System.out.println("===================================");
+		
+		System.out.println(ar);
+		
+		System.out.println("===================================");
+		
+		//If string is an array, then regular expression in split method syntax has to be put in brackets
+		String emp = "Vibha$Pune$QA$10000";
+		String emp1[] = emp.split("[$]");
+		
+		for(int e=0; e<emp1.length;e++){
+		System.out.println(emp1[e] + " ");
+	}
+		
+		System.out.println("===================================");
+		
+		String str = "This_is_string_manipulation_program";
+		ArrayList<String> arlist = getDetails(str);
+		System.out.println(arlist);
+	}
+		
+	public static ArrayList<String> getDetails(String str){
+		
+		String str1[] = str.split("_");
+		ArrayList<String> arl = new ArrayList<String>();
+		for(int k=0; k<str1.length;k++){
+			arl.add(str1[k]);
+		}
+		return arl;
+	}
+	}
+	
